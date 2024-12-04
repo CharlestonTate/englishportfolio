@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/bauhaus-modern');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--dynamic-font, 'Poppins'), sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+body .home p
+{
+    color: #000;
+}
+
+/* Header */
+header {
+    background: #007BFF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 100000;
+}
+
+header .logo {
+    width: 60px;
+    height: 60px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.home-image {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.home-text h1 {
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.home-text h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+h2
+{
+    color: #000;
+    font-size: 2.5rem;
+}
+
+.paper-description p {
+    font-size: 1.5em;
+    color: #000;
+    max-width: 1200px; /* Restricts paragraph width */
+    margin: 0 auto; /* Centers the paragraph within the section */
+    line-height: 1.6; /* Improves readability */
+    text-align: justify; /* Makes the text alignment more balanced */
+}
+
+
+.paper h2
+{
+    text-align: center;
+    z-index: -1;
+}
+
+.home-text p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+/* Paper Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.page-thumbnail {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Full Page View */
+.full-page-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.full-page-view.hidden {
+    display: none;
+}
+
+#full-image {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    background: #0056b3;
+}
+
+/* Slightly Larger Preview Thumbnails */
+.page-thumbnail {
+    width: 300px; /* Increased width */
+    height: 400px; /* Increased height */
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Slightly Larger Full Page View */
+#full-image {
+    max-width: 98%; /* Slightly larger width */
+    max-height: 95%; /* Slightly larger height */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Larger Back Button */
+#back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 1rem 2rem; /* Increased padding for a bigger button */
+    background: #007BFF;
+    color: white;
+    font-size: 1.5rem; /* Larger font size */
+    border: none;
+    border-radius: 10px; /* Slightly rounder corners */
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Add shadow for prominence */
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#back-button:hover {
+    background: #0056b3;
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
